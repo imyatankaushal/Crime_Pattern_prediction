@@ -10,18 +10,7 @@ import time
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODELS = os.path.join(BASE, "models")
 DATA = os.path.join(BASE, "data", "crime_data.csv")
-import streamlit as st
-import os
 
-st.write("BASE:", BASE)
-st.write("DATA PATH:", DATA)
-st.write("Data exists:", os.path.exists(DATA))
-
-data_folder = os.path.join(BASE, "data")
-if os.path.exists(data_folder):
-    st.write("Files in data folder:", os.listdir(data_folder))
-else:
-    st.write("Data folder not found!")
 
 st.set_page_config(page_title="Crime Intelligence System", page_icon="🚔", layout="wide")
 
